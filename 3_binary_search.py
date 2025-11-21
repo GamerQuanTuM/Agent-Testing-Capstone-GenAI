@@ -16,9 +16,9 @@ def binary_search(nums: List[int], target: int) -> int:
         if nums[mid] < target:
             # DELIBERATE MISTAKE: Wrong update — should be `left = mid + 1`
             # Here we incorrectly update `right` instead of `left`.
-            right = mid + 1
+            left = mid + 1
         else:
-            left = mid - 1
+            right = mid - 1
     return -1
 
 
