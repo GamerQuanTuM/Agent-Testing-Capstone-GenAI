@@ -18,10 +18,11 @@ def binary_search(nums: List[int], target: int) -> int:
             # Here we incorrectly update `right` instead of `left`.
             left = mid + 1
         else:
+            # FIX: Correctly update `right` to `mid - 1` when `nums[mid]` is greater than `target`
             right = mid - 1
     return -1
 
 
 if __name__ == '__main__':
     arr = [1, 3, 5, 7, 9]
-    print('binary_search 7 ->', binary_search(arr, 7))  # expected 3 but will be wrong due to the deliberate bug
+    print('binary_search 7 ->', binary_search(arr, 7))  # expected 3
